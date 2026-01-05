@@ -1,0 +1,194 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "News Gothic MT", sans-serif;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+.header {
+  padding: 40px 20px;
+}
+
+.header-inner {
+  max-width: 2200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: News Gothic MT;
+}
+
+.site-title {
+  font-size: clamp(20px, 3vw, 29px);
+  font-family: News Gothic MT;
+}
+
+/* ================= NAV ================= */
+.nav a,
+.navresume a {
+  margin: 10px 20px;
+  text-decoration: none;
+  color: #0a0909;
+  font-size: clamp(16px, 2.5vw, 29px);
+  text-transform: uppercase;
+  
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* ================= CONTENT ================= */
+.content {
+  max-width: 2200px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* ================= HEADINGS ================= */
+h1 {
+  font-size: clamp(26px, 4vw, 36px);
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h2 {
+  margin: 10px 0 20px;
+  font-size: clamp(24px, 4vw, 36px);
+  text-align: center;
+  text-transform: capitalize;
+  font-family: News Gothic MT;
+}
+
+/* ================= TEXT ================= */
+p {
+  max-width: 1000px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 0 15px;
+  font-family: News Gothic MT;
+}
+
+/* ================= HERO ================= */
+.headerh{
+  margin: 30px 0 15px;
+  font-size: 48px;
+  text-align: center;
+  color: black;
+  margin-top: 200px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+
+  
+}
+
+.headerh a {
+  text-decoration: none;
+  color: black;
+  font-size: 180px;
+  font-family: News Gothic MT;
+
+}
+/* ================= STUDY IMAGE ================= */
+.studyimage img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+/* ================= SLIDER (2 COL) ================= */
+
+.three-slider {
+  width: 100%;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.slider-2col {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 480px; 
+}
+
+/* Track */
+.track-2col {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Slides */
+.slide-2col {
+   height: 100%;           /* fill slider container height */
+  width: auto;            /* maintain aspect ratio */
+  object-fit: contain;
+}
+
+/* Tablets: 2 images visible */
+@media (min-width: 768px) {
+  .slide-2col {
+    flex: 0 0 50%;
+    height: 480px; 
+    
+  }
+}
+
+/* Large screens: 3 images visible */
+@media (min-width: 1200px) {
+  .slide-2col {
+    flex: 0 0 33.33%;
+    height: 480px;
+     height: 480px;        /* fixed height */
+  width: auto;          /* width adjusts automatically */
+  object-fit: contain;  /* ensures whole image fits without cropping */
+  display: block;
+  margin: 0 10px;  
+  }
+}
+
+/* Large screens: 3 images visible */
+@media (min-width: 853px) {
+  .slide-2col {
+    flex: 0 0 33.33%;
+     height: 480px;        /* fixed height */
+  width: auto;          /* width adjusts automatically */
+  object-fit: contain;  /* ensures whole image fits without cropping */
+  display: block;
+  margin: 0 10px; 
+  }
+}
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 32px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  cursor: pointer;
+  z-index: 5;
+  user-select: none;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
