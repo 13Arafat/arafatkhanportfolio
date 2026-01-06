@@ -67,3 +67,18 @@ document.querySelectorAll('.slider-2col, .slider-3col').forEach(slider => {
     update();
   });
 });
+function openPDF(pdfPath) { 
+  const frame = document.getElementById("pdfFrame"); 
+  const popup = document.getElementById("pdfPopup"); 
+  if (!frame || !popup) return;
+   frame.src = pdfPath; 
+  popup.style.display = "block"; } 
+
+  function closePDF() { 
+    const frame = document.getElementById("pdfFrame"); 
+    const popup = document.getElementById("pdfPopup"); 
+    if (!frame || !popup) return;
+
+    popup.style.display = "none"; 
+    frame.src = ""; 
+  }
